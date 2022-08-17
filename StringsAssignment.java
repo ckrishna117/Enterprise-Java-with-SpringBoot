@@ -1,4 +1,4 @@
-package com.patterns;
+
 class LaunchStringAssignment{
     /*
     * 1.write a program to reverse a String
