@@ -316,22 +316,22 @@ return isPanagram;
     /*7.write a program to count the number of vowels and consonants of a string value
     * */
     public void countNumberofVowelsAndConsonants(String str){
-        int vcount=0,ccount=0,scount=0;
+        int vcount=0,ccount=0;
         String toLowerCaseString=convertToLowerCase(str);
         for(int i=0;i<str.length();i++){
-            if (toLowerCaseString.charAt(i) == ' ' || toLowerCaseString.charAt(i) == '.' || toLowerCaseString.charAt(i) == '!' || toLowerCaseString.charAt(i) == '?' ||
-                    toLowerCaseString.charAt(i) == '@' || toLowerCaseString.charAt(i) == '#' || toLowerCaseString.charAt(i) == '$' || toLowerCaseString.charAt(i) == '\n') {
-                continue;
-            }
-            else if(toLowerCaseString.charAt(i)=='a'||toLowerCaseString.charAt(i)=='e'||toLowerCaseString.charAt(i)=='i'||
+            
+             if(toLowerCaseString.charAt(i)=='a'||toLowerCaseString.charAt(i)=='e'||toLowerCaseString.charAt(i)=='i'||
                     toLowerCaseString.charAt(i)=='o'||toLowerCaseString.charAt(i)=='u')
-                {   vcount++;
+                {   vcount++; // vowels are checked
+            }
+            else if(toLowerCaseString.charAt(i)>'a' || toLowerCaseString.charAt(i)<='z'){
+                ccount++; // consonants are checked
             }
             else{
-                ccount++;
+                continue;//here special characters or numbers 
             }
         }
-        System.out.println("In the String "+str+"number of vowels are: "+vcount+"number of consonants are: "+ccount);
+        System.out.println("In the String "+str+"number of vowels are: "+vcount+" number of consonants are: "+ccount);
     }
     /*8.write a program to count the number of special characters
      * */
